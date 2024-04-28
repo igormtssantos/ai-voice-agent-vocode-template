@@ -16,7 +16,7 @@ from vocode.streaming.telephony.server.base import (
     TwilioInboundCallConfig,
     TelephonyServer,
 )
-from vocode.streaming.models.synthesizer import StreamElementsSynthesizerConfig #, ElevenLabsSynthesizerConfig
+from vocode.streaming.models.synthesizer import ElevenLabsSynthesizerConfig #StreamElementsSynthesizerConfig
 
 
 
@@ -95,8 +95,8 @@ AGENT_CONFIG = ChatGPTAgentConfig(
 # higher quality (like Eleven Labs below, needs key) available in
 # vocode.streaming.models.synthesizer.
 # SYNTH_CONFIG = StreamElementsSynthesizerConfig.from_telephone_output_device()
-#SYNTH_CONFIG = ElevenLabsSynthesizerConfig.from_telephone_output_device(
-#api_key=os.getenv("ELEVEN_LABS_API_KEY") or "<your EL token>")
+SYNTH_CONFIG = ElevenLabsSynthesizerConfig.from_telephone_output_device(
+api_key=os.getenv("ELEVEN_LABS_API_KEY") or "<your EL token>")
 SYNTH_CONFIG = StreamElementsSynthesizerConfig(
     language="pt-BR",
     sampling_rate=16000,  # Adicione esta linha
