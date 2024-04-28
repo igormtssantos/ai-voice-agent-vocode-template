@@ -97,9 +97,9 @@ AGENT_CONFIG = ChatGPTAgentConfig(
 # SYNTH_CONFIG = StreamElementsSynthesizerConfig.from_telephone_output_device()
 #SYNTH_CONFIG = ElevenLabsSynthesizerConfig.from_telephone_output_device(
 #api_key=os.getenv("ELEVEN_LABS_API_KEY") or "<your EL token>")
-SYNTH_CONFIG = StreamElementsSynthesizerConfig.from_telephone_output_device(
-    language="pt-BR",  # Defina o idioma para português do Brasil
-    voice_name="Camila",  # Escolha uma voz em português
+SYNTH_CONFIG = StreamElementsSynthesizerConfig(
+    language="pt-BR",
+    # Outras configurações, se necessário
 )
 
 
