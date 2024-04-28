@@ -99,6 +99,8 @@ AGENT_CONFIG = ChatGPTAgentConfig(
 #api_key=os.getenv("ELEVEN_LABS_API_KEY") or "<your EL token>")
 SYNTH_CONFIG = StreamElementsSynthesizerConfig(
     language="pt-BR",
+    sampling_rate=16000,  # Adicione esta linha
+    audio_encoding="wav",  # Adicione esta linha
     # Outras configurações, se necessário
 )
 
