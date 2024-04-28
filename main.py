@@ -100,7 +100,7 @@ AGENT_CONFIG = ChatGPTAgentConfig(
 SYNTH_CONFIG = StreamElementsSynthesizerConfig(
     language="pt-BR",
     sampling_rate=16000,  # Adicione esta linha
-    audio_encoding="wav",  # Adicione esta linha
+    audio_encoding="linear16",  # Use 'linear16' em vez de 'wav'
     # Outras configurações, se necessário
 )
 
